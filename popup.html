@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+    <script type="text/javascript" src='js/jquery-1.10.2.min.js'></script>
+    <script type="text/javascript" src='js/bootstrap.min.js'></script>
+    <style>
+    body
+    {
+    min-width: 450px;
+    margin: 0px;
+    font-family: Segoe UI, Arial, sans-serif;
+    font-size: 13px;
+    color: #545454;
+    background-color: #f8f6f2;
+    background-image: url(background.png);
+    }
+    </style>
+  </head>
+  <body min-width=250px>
+    <div>
+        <span class="help-block">输入需要的selector</span>
+        <form>
+        <div class="form-group">
+            <input type="email" id='selector' class="form-control" placeholder="Enter xpath">
+            <input type="email" id='attr' class="form-control" placeholder="attr">
+            <button id='confirm'>确定</button>
+            <button id='next'>下一个</button>
+            <textarea id="content"  style="height:25px;width:100%"></textarea>
+        </div>
+        </form>
+        <div class="help-block" id="target"></div>
+    </div>
+  </body>
+  <script type="text/javascript" src='js/popup.js'></script>
+</html>
