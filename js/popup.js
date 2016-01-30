@@ -35,10 +35,8 @@ if(backgroundObj){
         }
         backgroundObj.contents = msg.content;
         var sep = $('#sep').val();
-        switch (sep){
-            case '\\n':sep='\n';break;
-            case '\\t':sep='\t';break;
-        }
+        sep = sep.replace(/\\n/g, '\n');
+        sep = sep.replace(/\\t/g, '\t');
         var content = backgroundObj.contents.join(sep);
         $('#content').val(content);
     });
@@ -56,6 +54,10 @@ if(backgroundObj){
           $('#selector').val(s);
       }
       $('#update').click();
+  });
+  $('#all').click(function(){
+      //$('#content').focus();
+      $('#content').select();
   });
 }
 
